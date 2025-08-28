@@ -1,6 +1,6 @@
 # Start from the pre-built audiveris image
 FROM toprock/audiveris
-
+FROM alpine:latest
 # Install a Python runtime for the web application
 RUN apk add --no-cache python3 py3-pip
 
