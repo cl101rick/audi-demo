@@ -9,7 +9,7 @@ COPY . /app
 WORKDIR /app
 
 # Install Flask
-RUN python -m pip install flask
+#RUN python -m pip install flask
 
 # Set the entrypoint to run the Flask application
 CMD ["python3", "app.py"]
