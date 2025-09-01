@@ -9,6 +9,18 @@ OUTPUT_FOLDER = '/app/outputs'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 os.makedirs(OUTPUT_FOLDER, exist_ok=True)
 
+def home():
+    return ''hello world!''
+    <!doctype html>
+    <title>Upload PDF for MusicXML Conversion</title>
+    <h1>Upload PDF File</h1>
+    <form method=post enctype=multipart/form-data action="/convert">
+      <input type=file name=file>
+      <input type=submit value=Upload>
+    </form>
+    
+
+
 @app.route('/convert', methods=['POST'])
 def convert_pdf():
     # Handle file upload
