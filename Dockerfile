@@ -9,7 +9,10 @@ COPY . /app
 WORKDIR /app
 
 # Install Flask
-#RUN python -m pip install flask
+RUN python3 -m venv venv
+ENV PATH="/app/venv/bin:$PATH"  
+run source venv/bin/activate
+RUN pip install flask
 
 # Set the entrypoint to run the Flask application
 CMD ["python3", "app.py"]
